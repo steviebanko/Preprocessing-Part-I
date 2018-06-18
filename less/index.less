@@ -97,14 +97,14 @@ header .logo {
 }
 
 /* Call To Action (CTA) Styles */
-
+@px: 72px;
 .cta {
     display: flex;
-    margin-top: 72px;
+    margin-top: @px;
     justify-content: flex-end;
 
 .cta-text {
-    font-size: 72px;
+    font-size: @px;
     text-align: center;
     letter-spacing: 5px;
     display: flex;
@@ -130,10 +130,11 @@ button:hover {
             
 
 /* Main Content Styles */
-
- {
-   border-top: 2px solid black; 
-   border-bottom: 2px solid black;
+// mixins
+@solid-border: 2px solid black;
+.main-content {
+   border-top: @solid-border 
+   border-bottom: @solid-border
    margin: 75px 0 35px 0;
    padding: 35px 0;
    font-size: 16px;
